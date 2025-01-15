@@ -33,7 +33,7 @@ function HeaderRight({ setShowLeft }) {
   );
 }
 
-function HeaderLeft() {
+function HeaderLeft({ setShowRight }) {
   return (
     <div
       style={{
@@ -43,17 +43,24 @@ function HeaderLeft() {
       }}
     >
       <img src={searchIcon} alt="search logo" style={{ height: "36px" }} />
-      <img src={tileIcon} alt="tiles logo" style={{ height: "36px" }} />
+      <img
+        src={tileIcon}
+        alt="tiles logo"
+        style={{ height: "36px" }}
+        onClick={() => {
+          setShowRight((e) => !e);
+        }}
+      />
       <img src={darkIcon} alt="dark logo" style={{ height: "36px" }} />
     </div>
   );
 }
 
-export default function Header({ setShowLeft }) {
+export default function Header({ setShowLeft, setShowRight }) {
   return (
     <div className="header">
       <HeaderRight setShowLeft={setShowLeft} />
-      <HeaderLeft />
+      <HeaderLeft setShowRight={setShowRight} />
     </div>
   );
 }

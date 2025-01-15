@@ -59,8 +59,15 @@
 }
 
 .right {
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 400px;
+  padding: 20px;
+  margin-left: 10px;
+  background-color: #eef6ef;
 }
 
 .leftBottom {
